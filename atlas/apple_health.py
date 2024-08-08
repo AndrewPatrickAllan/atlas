@@ -1,8 +1,9 @@
 import os
-import polars as pl
-import lxml.etree as et
 import sys
 import time
+import polars as pl
+import lxml.etree as et
+
 
 
 def to_df(file_path):
@@ -159,4 +160,14 @@ def to_df(file_path):
 
 def write_parquet(df, path=None):
     df.write_parquet(path, compression="zstd", compression_level=22)
-    return
+#     return
+
+
+
+file_path='/Users/allan/Documents/AA_admin/apple_health_export/export.xml'
+df = to_df(file_path)
+
+
+
+
+
